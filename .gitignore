@@ -13,9 +13,12 @@ ede-projects.el
 custom.el
 places
 .smex-items
+save/*
+ac-comphist.dat
 savefile/
 projectile-bookmarks.eld
 session*
 .cask
 tramp
 /var/pcache
+.mc-lists.el

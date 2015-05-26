@@ -1,4 +1,4 @@
-;;; functions.el -- helper functions for miscellaneous tasks
+;;; core-functions.el -- helper functions for miscellaneous tasks
 
 (defun smart-open-line-above ()
   "Insert an empty line above the current line.
@@ -85,5 +85,5 @@ This functions should be added to the hooks of major modes for programming."
    nil '(("\\<\\(\\(FIX\\(ME\\)?\\|TODO\\|OPTIMIZE\\|HACK\\|REFACTOR\\):\\)"
           1 font-lock-warning-face t))))
 
-(provide 'functions)
-;;; functions.el ends here
+(provide 'core-functions)
+;;; core-functions.el ends here

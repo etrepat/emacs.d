@@ -1,16 +1,24 @@
-;;; editing.el --- Core editor tweaks
+;;; core-editing.el --- Core editor tweaks
 
 ;; enable ido
 (require 'ido)
 (require 'ido-ubiquitous)
+(require 'flx-ido)
 
-(setq ido-enable-flex-matching t
+(setq ido-enable-prefix nil
+      ido-enable-flex-matching t
       ido-create-new-buffer 'always
-      ido-use-filename-at-point 'guess
+      ido-use-filename-at-point nil ; this annoys me greatly when C-x C-f'ing...
+      ido-auto-merge-work-directories-length 0
+      ido-max-prospects 10
       ido-save-directory-list-file (expand-file-name "ido.hist" etrepat/save-dir)
       ido-default-file-method 'selected-window)
 (ido-mode t)
+(ido-everywhere t)
 (ido-ubiquitous-mode t)
+;; enable flx-ido
+(flx-ido-mode t)
+(setq ido-use-faces nil)
 
 ;; smex
 (setq smex-save-file (expand-file-name ".smex-items" etrepat/save-dir))
@@ -98,7 +106,8 @@
 
 ;; projectile
 (require 'projectile)
-(setq projectile-cache-file (expand-file-name  "projectile.cache" etrepat/save-dir))
+(setq projectile-cache-file (expand-file-name  "projectile.cache" etrepat/save-dir)
+      projectile-known-projects-file (expand-file-name "projectile-bookmarks.eld" etrepat/save-dir))
 (projectile-global-mode t) ;; enable globally
 
 ;; windmove
@@ -124,7 +133,15 @@
 
 ;; auto-complete
 (require 'auto-complete-config)
+(setq ac-comphist-file (expand-file-name "ac-comphist.dat" etrepat/save-dir))
 (ac-config-default)
+(add-to-list 'completion-styles 'initials t)
+(setq completion-cycle-threshold 5
+      ac-auto-start 3)
 
-(provide 'editing)
-;;; editing ends here
+;; multiple cursors
+(require 'multiple-cursors)
+(setq mc/list-file (expand-file-name "mc-lists.el" etrepat/save-dir))
+
+(provide 'core-editing)
+;;; core-editing ends here

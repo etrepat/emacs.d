@@ -26,11 +26,11 @@
 (defvar etrepat/save-dir (expand-file-name "save" user-emacs-directory))
 
 ;; Load global config & keybindings
-(require 'packages)
-(require 'functions)
-(require 'ui)
-(require 'editing)
-(require 'programming)
-(require 'keybindings)
+(require 'core-packages)
+(require 'core-functions)
+(require 'core-ui)
+(require 'core-editing)
+(require 'core-keybindings)
+(require 'mode-programming)
 
 ;; init.el ends here

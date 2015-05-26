@@ -1,4 +1,4 @@
-;;; keybindings.el -- Global keybindings
+;;; core-keybindings.el -- Global keybindings
 
 ;; use custom move-beginning-of-line
 (global-set-key [remap move-beginning-of-line]
@@ -53,5 +53,11 @@
 ;; expand-region
 (global-set-key (kbd "C-=") 'er/expand-region)
 
-(provide 'keybindings)
-;;; keybindings.el ends here
+;; multiple cursors
+(global-set-key (kbd "C-c C-S-l") 'mc/edit-lines)
+(global-set-key (kbd "C-c C-S-n") 'mc/mark-next-line-like-this)
+(global-set-key (kbd "C-c C-S-p") 'mc/mark-previous-line-like-this)
+(global-set-key (kbd "C-c C-S-n") 'mc/mark-all-like-this)
+
+(provide 'core-keybindings)
+;;; core-keybindings.el ends here

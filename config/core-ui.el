@@ -1,4 +1,4 @@
-;;; ui.el --- UI tweaks
+;;; core-ui.el --- UI tweaks
 
 ;; disable startup screen
 (setq inhibit-startup-message t)
@@ -50,7 +50,12 @@
                     :height 140
                     :weight 'normal :width 'normal)
 
+;; theme
 (load-theme 'zenburn t)
 
-(provide 'ui)
-;;; ui.el ends here
+;; powerline
+(require 'powerline)
+(powerline-default-theme)
+
+(provide 'core-ui)
+;;; core-ui.el ends here
