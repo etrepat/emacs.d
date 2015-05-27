@@ -16,6 +16,7 @@
     expand-region
     flx-ido
     flycheck
+    flycheck-rust
     gitattributes-mode
     gitconfig-mode
     gitignore-mode

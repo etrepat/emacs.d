@@ -13,5 +13,8 @@
 (add-hook 'rust-mode-hook (lambda ()
                             (run-hooks 'rust-mode-defaults-hook)))
 
+(eval-after-load 'flycheck
+  '(add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
+
 (provide 'mode-rust)
 ;;; mode-rust.el ends here
