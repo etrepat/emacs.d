@@ -38,6 +38,9 @@
 (global-set-key [remap kill-line] 'kill-whole-line-with-indentation)
 (global-set-key (kbd "C-S-k") 'kill-line)
 
+;; modify insert line
+(global-set-key (kbd "C-j") 'smart-open-line)
+
 ;; windmove keybindings
 (global-set-key (kbd "C-c <left>")  'windmove-left)
 (global-set-key (kbd "C-c <right>") 'windmove-right)
