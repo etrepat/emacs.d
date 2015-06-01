@@ -28,6 +28,9 @@
 ;; highlight current line
 (global-hl-line-mode 1)
 
+;; nice cursor
+(setq-default cursor-type 'bar)
+
 ;; enable y/n answers
 (defalias 'yes-or-no-p 'y-or-n-p)
 
