@@ -14,7 +14,13 @@
 (add-to-list 'auto-mode-alist
              '("/\\(views\\|html\\|theme\\|templates\\)/.*\\.php\\'" . web-mode))
 
-(defun my-web-mode-defaults ())
+(defun my-web-mode-defaults ()
+  (setq web-mode-markup-indent-offset 2
+        web-mode-css-indent-offset 2
+        web-mode-code-indent-offset 2
+        web-mode-attr-indent-offset 2
+        web-mode-enable-current-element-highlight t
+        web-mode-enable-current-column-highlight t))
 
 (setq web-mode-defaults-hook 'my-web-mode-defaults)
 
