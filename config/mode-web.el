@@ -20,7 +20,8 @@
         web-mode-code-indent-offset 2
         web-mode-attr-indent-offset 2
         web-mode-enable-current-element-highlight t
-        web-mode-enable-current-column-highlight t))
+        web-mode-enable-current-column-highlight t
+        web-mode-enable-auto-pairing nil))
 
 (setq web-mode-defaults-hook 'my-web-mode-defaults)
 
