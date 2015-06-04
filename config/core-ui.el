@@ -60,5 +60,9 @@
 (require 'powerline)
 (powerline-default-theme)
 
+;; neotree
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+
 (provide 'core-ui)
 ;;; core-ui.el ends here

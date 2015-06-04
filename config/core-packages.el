@@ -29,6 +29,7 @@
     magit
     markdown-mode
     multiple-cursors
+    neotree
     php-mode
     popup
     powerline
