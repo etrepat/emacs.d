@@ -13,6 +13,7 @@
   '(
     anzu
     auto-complete
+    diminish
     expand-region
     flx-ido
     flycheck

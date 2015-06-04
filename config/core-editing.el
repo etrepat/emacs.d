@@ -27,6 +27,9 @@
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
+;; diminish
+(require 'diminish)
+
 ;; saveplace remembers your location in a file when saving files
 (require 'saveplace)
 (setq save-place-file (expand-file-name "saveplace" etrepat/save-dir))
@@ -116,9 +119,11 @@
 ;; volatile-highlights - useful visual feedback on region operations
 (require 'volatile-highlights)
 (volatile-highlights-mode t)
+(diminish 'volatile-highlights-mode)
 
 ;; anzu-mode enhances isearch & query-replace vim-style
 (require 'anzu)
+(diminish 'anzu-mode)
 (global-anzu-mode)
 
 ;; better undo functionality
@@ -127,6 +132,7 @@
       `((".*" . ,temporary-file-directory)))
 (setq undo-tree-auto-save-history t)
 (global-undo-tree-mode)
+(diminish 'undo-tree-mode)
 
 ;; expand-region
 (require 'expand-region)
