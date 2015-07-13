@@ -21,7 +21,8 @@
         web-mode-attr-indent-offset 2
         web-mode-enable-current-element-highlight t
         web-mode-enable-current-column-highlight t
-        web-mode-enable-auto-pairing nil))
+        web-mode-enable-auto-pairing nil
+        web-mode-enable-auto-closing t))
 
 (setq web-mode-defaults-hook 'my-web-mode-defaults)
 
