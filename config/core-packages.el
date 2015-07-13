@@ -11,9 +11,11 @@
 
 (defvar etrepat/packages
   '(
+    alchemist
     anzu
     auto-complete
     diminish
+    elixir-mode
     expand-region
     flx-ido
     flycheck

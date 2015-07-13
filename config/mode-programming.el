@@ -25,6 +25,7 @@
 
 (defvar etrepat/edit-modes
   '(
+    mode-elixir
     mode-haskell
     mode-javascript
     mode-markdown
