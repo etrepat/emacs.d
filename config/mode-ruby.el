@@ -1,5 +1,11 @@
 ;;; mode-ruby.el --- ruby-mode customizations
 
+;;; Commentary:
+;;
+
+;;; Code:
+;;
+
 ;; ruby-mode
 (require 'ruby-tools)
 (require 'inf-ruby)
@@ -29,6 +35,7 @@
 (define-key 'help-command (kbd "R") 'yari)
 
 (defun my-ruby-mode-defaults ()
+  "Ruby mode default settings."
   (inf-ruby-minor-mode +1)
   (ruby-tools-mode +1)
   (subword-mode +1))

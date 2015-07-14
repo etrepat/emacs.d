@@ -1,5 +1,11 @@
 ;;; core-packages.el --- Package repositories and selection.
 
+;;; Commentary:
+;;
+
+;;; Code:
+;;
+
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.org/packages/") t)
@@ -48,11 +54,8 @@
     windmove
     yasnippet
     yaml-mode
-    yari
-    ;; themes
-    base16-theme
-    zenburn-theme)
-  "Default packages")
+    yari)
+  "Default packages.")
 
 (dolist (p etrepat/packages)
   (when (not (package-installed-p p))

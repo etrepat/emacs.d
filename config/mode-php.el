@@ -1,5 +1,11 @@
 ;;; mode-php.el --- php-mode customizations
 
+;;; Commentary:
+;;
+
+;;; Code:
+;;
+
 ;; php-mode
 (require 'php-mode)
 
@@ -11,6 +17,7 @@
    (c-indent-comments-syntactically-p t)))
 
 (defun my-php-mode-defaults ()
+  "My PHP mode defaults."
   (setq php-template-compatibility nil
         whitespace-line-column 120
         electric-pair-pairs '(

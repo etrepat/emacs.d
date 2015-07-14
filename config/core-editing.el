@@ -1,5 +1,11 @@
 ;;; core-editing.el --- Core editor tweaks
 
+;;; Commentary:
+;;
+
+;;; Code:
+;;
+
 ;; enable ido
 (require 'ido)
 (require 'ido-ubiquitous)

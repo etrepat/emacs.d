@@ -1,5 +1,11 @@
 ;;; init.el --- emacs initialization file
 
+;;; Commentary:
+;;
+
+;;; Code:
+;;
+
 ;; Username & email
 (setq user-full-name "Estanislau Trepat")
 (setq user-mail-address "estanis@etrepat.com")

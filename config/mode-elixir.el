@@ -1,5 +1,11 @@
 ;;; mode-elixir.el --- elixir-mode customizations
 
+;;; Commentary:
+;;
+
+;;; Code:
+;;
+
 ;; elixir-mode
 (require 'elixir-mode)
 (require 'alchemist)

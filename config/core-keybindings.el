@@ -1,5 +1,11 @@
 ;;; core-keybindings.el -- Global keybindings
 
+;;; Commentary:
+;;
+
+;;; Code:
+;;
+
 ;; use custom move-beginning-of-line
 (global-set-key [remap move-beginning-of-line]
                 'better-move-beginning-of-line)

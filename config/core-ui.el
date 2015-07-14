@@ -1,5 +1,11 @@
 ;;; core-ui.el --- UI tweaks
 
+;;; Commentary:
+;;
+
+;;; Code:
+;;
+
 ;; disable startup screen
 (setq inhibit-startup-message t)
 

@@ -1,5 +1,11 @@
 ;;; mode-javascript.el --- javascript-mode customizations
 
+;;; Commentary:
+;;
+
+;;; Code:
+;;
+
 ;; js-mode
 (require 'js2-mode)
 (require 'json-mode)
@@ -10,6 +16,7 @@
 (add-to-list 'interpreter-mode-alist '("node" . js2-mode))
 
 (defun my-js-mode-defaults ()
+  "My javascript default settings."
   (setq mode-name "JS2"
         js2-basic-offset 2
         js2-bounce-indent-p nil

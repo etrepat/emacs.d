@@ -1,12 +1,19 @@
 ;;; mode-rust.el --- rust-mode customizations
 
+;;; Commentary:
+;;
+
+;;; Code:
+;;
+
 ;; rust-mode
 (require 'rust-mode)
 
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
 (add-to-list 'ac-modes 'rust-mode)
 
-(defun my-rust-mode-defaults ())
+(defun my-rust-mode-defaults ()
+  "My rust mode default settings.")
 
 (setq rust-mode-defaults-hook 'my-rust-mode-defaults)
 

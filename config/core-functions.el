@@ -1,5 +1,11 @@
 ;;; core-functions.el -- helper functions for miscellaneous tasks
 
+;;; Commentary:
+;;
+
+;;; Code:
+;;
+
 (defun smart-open-line-above ()
   "Insert an empty line above the current line.
 Position the cursor at it's beginning, according to the current mode."
@@ -28,7 +34,7 @@ Passes ARG to command `kill-whole-line' when provided."
   (back-to-indentation))
 
 (defun toggle-comment-on-line-or-region (&optional arg)
-  "comment or uncomment region (dwim) or current line if no region is marked"
+  "Comment or uncomment region (dwim) or current line if no region is marked (with ARG)."
   (interactive "*P")
   (comment-normalize-vars)
   (if (and (not (region-active-p)) (not (looking-at "[ \t]*$")))
@@ -62,19 +68,19 @@ point reaches the beginning or end of the buffer, stop there."
     flyspell-mode +1))
 
 (defun enable-flyspell-prog-cond ()
-  "Enable `flyspell' prog-mode"
+  "Enable `flyspell' 'prog-mode'."
   (when (executable-find ispell-program-name)
      (flyspell-prog-mode)))
 
 (defun enable-whitespace-mode ()
-  "Enable `whitespace-mode'"
+  "Enable `whitespace-mode'."
   (add-hook 'before-save-hook (lambda ()
                                 (delete-trailing-whitespace)
                                 (whtespace-cleanup)) nil t)
   (whitespace-mode +1))
 
 (defun comment-auto-fill ()
-  "Enable `autofill' only on code comments (to hook on prog-mode)"
+  "Enable `autofill' only on code comments (to hook on 'prog-mode')."
   (setq-local comment-auto-fill-only-comments t)
   (auto-fill-mode +1))
 

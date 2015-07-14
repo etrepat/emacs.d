@@ -1,5 +1,11 @@
 ;;; mode-markdown.el --- markdown mode customizations
 
+;;; Commentary:
+;;
+
+;;; Code:
+;;
+
 ;; markdown-mode
 (require 'markdown-mode)
 

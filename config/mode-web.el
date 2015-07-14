@@ -1,5 +1,11 @@
 ;;; mode-web.el --- web-mode customizations
 
+;;; Commentary:
+;;
+
+;;; Code:
+;;
+
 ;; web-mode
 (require 'web-mode)
 
@@ -15,6 +21,7 @@
              '("/\\(views\\|html\\|theme\\|templates\\)/.*\\.php\\'" . web-mode))
 
 (defun my-web-mode-defaults ()
+  "My web mode defaults."
   (setq web-mode-markup-indent-offset 2
         web-mode-css-indent-offset 2
         web-mode-code-indent-offset 2

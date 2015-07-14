@@ -1,5 +1,11 @@
 ;;; mode-programming.el --- prog-mode generic configs
 
+;;; Commentary:
+;;
+
+;;; Code:
+;;
+
 ;; generic prog-mode defaults & customizations
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
@@ -35,7 +41,7 @@
     mode-stylesheets
     mode-web
     mode-yaml)
-  "Supported editing modes")
+  "Supported editing modes.")
 
 (dolist (p etrepat/edit-modes) (require p))
 
