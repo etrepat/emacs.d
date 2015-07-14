@@ -44,6 +44,9 @@
 (global-set-key [remap kill-line] 'kill-whole-line-with-indentation)
 (global-set-key (kbd "C-S-k") 'kill-line)
 
+;; duplicate line or region
+(global-set-key (kbd "C-c d") 'duplicate-line-or-region)
+
 ;; modify insert line
 (global-set-key (kbd "C-j") 'smart-open-line)
 
