@@ -25,6 +25,10 @@
 ;; set ~/.emacs.d/save to hold all save files and/or history files.
 (defvar etrepat/save-dir (expand-file-name "save" user-emacs-directory))
 
+;; add ~./.emacs.d/themes to the theme load path
+(defvar etrepat/themes-dir (expand-file-name "themes" user-emacs-directory))
+(add-to-list 'custom-theme-load-path etrepat/themes-dir)
+
 ;; Load global config & keybindings
 (require 'core-packages)
 (require 'core-functions)
