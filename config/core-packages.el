@@ -20,8 +20,10 @@
     alchemist
     anzu
     auto-complete
+    company
     diminish
     elixir-mode
+    elixir-yasnippets
     expand-region
     flx-ido
     flycheck
@@ -45,6 +47,7 @@
     rainbow-mode
     rainbow-delimiters
     ruby-tools
+    ruby-end
     rust-mode
     smex
     scss-mode
