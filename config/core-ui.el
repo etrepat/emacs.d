@@ -59,9 +59,6 @@
                     :height 140
                     :weight 'normal :width 'normal)
 
-;; theme
-(load-theme 'zenburn t)
-
 ;; powerline
 (require 'powerline)
 (powerline-default-theme)
@@ -69,6 +66,9 @@
 ;; neotree
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
+
+;; theme
+(load-theme 'monokai t)
 
 (provide 'core-ui)
 ;;; core-ui.el ends here
