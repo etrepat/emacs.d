@@ -98,7 +98,7 @@ With negative N, comment out original line and use the absolute value."
   "Enable `whitespace-mode'."
   (add-hook 'before-save-hook (lambda ()
                                 (delete-trailing-whitespace)
-                                (whtespace-cleanup)) nil t)
+                                (whitespace-cleanup)) nil t)
   (whitespace-mode +1))
 
 (defun comment-auto-fill ()
