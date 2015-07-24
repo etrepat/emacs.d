@@ -34,6 +34,7 @@
 ;; add ~./.emacs.d/themes to the theme load path
 (defvar etrepat/themes-dir (expand-file-name "themes" user-emacs-directory))
 (add-to-list 'custom-theme-load-path etrepat/themes-dir)
+(add-to-list 'load-path etrepat/themes-dir)
 
 ;; Load global config & keybindings
 (require 'core-packages)
