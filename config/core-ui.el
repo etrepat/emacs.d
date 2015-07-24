@@ -59,7 +59,7 @@
 
 ;; font face
 (set-face-attribute 'default nil
-                    :family "Source Code Pro"
+                    :family "Envy Code R"
                     :height 140
                     :weight 'normal :width 'normal)
 
