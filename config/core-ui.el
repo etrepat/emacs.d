@@ -39,7 +39,7 @@
 (hlinum-activate)
 
 ;; nice cursor
-(setq-default cursor-type 'bar)
+(setq-default cursor-type 'box)
 
 ;; enable y/n answers
 (defalias 'yes-or-no-p 'y-or-n-p)
