@@ -117,7 +117,8 @@
 ;; projectile
 (require 'projectile)
 (setq projectile-cache-file (expand-file-name  "projectile.cache" etrepat/save-dir)
-      projectile-known-projects-file (expand-file-name "projectile-bookmarks.eld" etrepat/save-dir))
+      projectile-known-projects-file (expand-file-name "projectile-bookmarks.eld" etrepat/save-dir)
+      projectile-mode-line '(:eval (format " P[%s]" (projectile-project-name))))
 (projectile-global-mode t) ;; enable globally
 
 ;; windmove
