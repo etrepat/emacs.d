@@ -63,16 +63,21 @@
                     :height 140
                     :weight 'normal :width 'normal)
 
-;; powerline
-(require 'powerline)
-(powerline-default-theme)
-
 ;; neotree
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
 
+;; powerline
+(require 'powerline)
+(setq powerline-default-separator 'wave)
+
 ;; theme
-(load-theme 'monokai t)
+;; (load-theme 'zenburn t)
+(require 'moe-theme)
+(moe-dark)
+
+;; theme & powerline customizations
+(powerline-moe-theme)
 
 (provide 'core-ui)
 ;;; core-ui.el ends here
