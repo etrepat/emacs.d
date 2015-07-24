@@ -34,6 +34,10 @@
 ;; highlight current line
 (global-hl-line-mode 1)
 
+;; highlight line number
+(require 'hlinum)
+(hlinum-activate)
+
 ;; nice cursor
 (setq-default cursor-type 'bar)
 
