@@ -74,6 +74,7 @@
 ;; theme
 ;; (load-theme 'zenburn t)
 (require 'moe-theme)
+(moe-theme-set-color 'green)
 (moe-dark)
 
 ;; theme & powerline customizations
