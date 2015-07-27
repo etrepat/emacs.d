@@ -22,6 +22,7 @@
   ;; (enable-flyspell-prog-cond)
   (enable-whitespace-mode)
   (comment-auto-fill)
+  (diminish 'auto-fill-function)
   (font-lock-comment-annotations))
 
 (setq prog-mode-defaults-hook 'my-prog-mode-defaults)
