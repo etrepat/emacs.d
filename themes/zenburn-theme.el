@@ -1,6 +1,6 @@
 ;;; zenburn-theme.el --- A low contrast color theme for Emacs.
 
-;; Copyright (C) 2011-2014 Bozhidar Batsov
+;; Copyright (C) 2011-2015 Bozhidar Batsov
 
 ;; Author: Bozhidar Batsov <bozhidar@batsov.com>
 ;; URL: http://github.com/bbatsov/zenburn-emacs
@@ -26,7 +26,7 @@
 
 ;;; Credits:
 
-;; Jani Nurminen created the original theme for vim on such this port
+;; Jani Nurminen created the original theme for vim on which this port
 ;; is based.
 
 ;;; Code:
@@ -42,7 +42,7 @@
     ("zenburn-bg-2"     . "#000000")
     ("zenburn-bg-1"     . "#2B2B2B")
     ("zenburn-bg-05"    . "#383838")
-    ("zenburn-bg"       . "#3F3F3F")
+    ("zenburn-bg"       . "#1C1C1C")
     ("zenburn-bg+05"    . "#494949")
     ("zenburn-bg+1"     . "#4F4F4F")
     ("zenburn-bg+2"     . "#5F5F5F")

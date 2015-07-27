@@ -69,16 +69,10 @@
 
 ;; powerline
 (require 'powerline)
-(setq powerline-default-separator 'wave)
+(powerline-default-theme)
 
 ;; theme
-;; (load-theme 'zenburn t)
-(require 'moe-theme)
-(moe-theme-set-color 'green)
-(moe-dark)
-
-;; theme & powerline customizations
-(powerline-moe-theme)
+(load-theme 'zenburn t)
 
 (provide 'core-ui)
 ;;; core-ui.el ends here
