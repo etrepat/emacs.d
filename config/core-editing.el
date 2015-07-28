@@ -12,6 +12,7 @@
 (require 'flx-ido)
 
 (setq ido-enable-prefix nil
+      ido-decorations (quote ("\n↪ "     "" "\n   " "\n   ..." "[" "]" " [No match]" " [Matched]" " [Not readable]" " [Too big]" " [Confirm]"))
       ido-enable-flex-matching t
       ido-create-new-buffer 'always
       ido-use-filename-at-point nil ; this annoys me greatly when C-x C-f'ing...
