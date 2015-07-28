@@ -20,6 +20,7 @@
     alchemist
     anzu
     auto-complete
+    ac-js2
     company
     diminish
     elixir-mode

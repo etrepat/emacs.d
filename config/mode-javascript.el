@@ -11,7 +11,7 @@
 (require 'json-mode)
 
 (add-to-list 'auto-mode-alist '("\\.js\\'"    . js2-mode))
-(add-to-list 'auto-mode-alist '("\\.es6\\'"    . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.es6\\'"   . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.pac\\'"   . js2-mode))
 (add-to-list 'interpreter-mode-alist '("node" . js2-mode))
 
@@ -22,6 +22,7 @@
         js2-bounce-indent-p nil
         js-indent-level 2)
   (js2-imenu-extras-mode +1)
+  (ac-js2-mode)
   (subword-mode +1)
   (rainbow-delimiters-mode +1))
 
