@@ -93,7 +93,7 @@
 (diminish 'whitespace-mode)
 
 ;; display trailing whitespace
-(setq show-trailing-whitespace)
+;; (setq show-trailing-whitespace)
 
 ;; (add-hook 'text-mode-hook 'enable-flyspell-cond)
 (add-hook 'text-mode-hook 'enable-whitespace-mode)
@@ -157,6 +157,10 @@
 ;; multiple cursors
 (require 'multiple-cursors)
 (setq mc/list-file (expand-file-name "mc-lists.el" etrepat/save-dir))
+
+;; fci
+(require 'fill-column-indicator)
+(setq fci-rule-column 80)
 
 (provide 'core-editing)
 ;;; core-editing ends here
