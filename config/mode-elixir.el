@@ -17,7 +17,7 @@
   (subword-mode +1)
   (rainbow-delimiters-mode +1)
   (company-mode +1)
-  (diminish 'company-mode "CO")
+  (diminish 'company-mode "Co")
   (setq company-idle-delay 0.1
         company-tooltip-limit 10
         company-minimum-prefix-length 2

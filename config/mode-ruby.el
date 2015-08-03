@@ -36,6 +36,7 @@
 
 (defun my-ruby-mode-defaults ()
   "Ruby mode default settings."
+  (setq ruby-align-to-stmt-keywords t)
   (inf-ruby-minor-mode +1)
   (ruby-tools-mode +1)
   (subword-mode +1))
