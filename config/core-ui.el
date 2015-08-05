@@ -69,7 +69,7 @@
 
 ;; powerline
 (require 'powerline)
-(powerline-default-theme)
+(powerline-center-theme)
 
 ;; theme
 (load-theme 'zenburn t)
