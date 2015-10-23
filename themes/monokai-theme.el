@@ -1,10 +1,10 @@
 ;;; monokai-theme.el --- A fruity color theme for Emacs.
 
-;; Copyright (C) 2011-2013
+;; Copyright (C) 2011-2015
 
 ;; Author: Kelvin Smith <oneKelvinSmith@gmail.com>
 ;; URL: http://github.com/oneKelvinSmith/monokai-emacs
-;; Version: 0.2.0
+;; Version: 0.2.2
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -128,8 +128,8 @@ Also affects 'linum-mode' background."
        ;; Adaptive colors
        (monokai-fg               "#F8F8F2")
        (monokai-bg               "#272822")
-       (monokai-hl-line          "#3E3D31")
        (monokai-hl               "#49483E")
+       (monokai-hl-line          "#49483E")
        (monokai-emph             "#F8F8F0")
        (monokai-comments         "#75715E")
        ;; Adaptive higher/lower contrast accented colors
@@ -312,10 +312,10 @@ Also affects 'linum-mode' background."
                                     :weight bold))))
 
    `(link-visited
-     ((,class (:foreground ,blue
+     ((,class (:foreground ,violet
                            :underline t
                            :weight normal))
-      (,terminal-class (:foreground ,terminal-blue
+      (,terminal-class (:foreground ,terminal-violet
                                     :underline t
                                     :weight normal))))
 
@@ -333,7 +333,7 @@ Also affects 'linum-mode' background."
 
    `(lazy-highlight
      ((,class (:foreground ,monokai-bg
-                           :background ,yellow
+                           :background ,monokai-comments
                            :weight normal))
       (,terminal-class (:foreground ,terminal-monokai-bg
                                     :background ,terminal-yellow
@@ -458,8 +458,8 @@ Also affects 'linum-mode' background."
                                     :foreground ,terminal-monokai-bg))))
 
    `(cua-rectangle
-    ((,class (:inherit region
-                        :background ,magenta
+     ((,class (:inherit region
+                        :background ,violet
                         :foreground ,monokai-bg))
       (,terminal-class (:inherit region
                                  :background ,terminal-magenta
@@ -534,15 +534,15 @@ Also affects 'linum-mode' background."
    ;; dropdown
    `(dropdown-list-face
      ((,class (:background ,monokai-hl
-                           :foreground ,cyan))
+                           :foreground ,blue))
       (,terminal-class (:background ,terminal-monokai-hl
-                                    :foreground ,terminal-cyan))))
+                                    :foreground ,terminal-blue))))
 
    `(dropdown-list-selection-face
-     ((,class (:background ,cyan-lc
-                           :foreground ,cyan-hc))
-      (,terminal-class (:background ,terminal-cyan-lc
-                                    :foreground ,terminal-cyan-hc))))
+     ((,class (:background ,green
+                           :foreground ,monokai-bg))
+      (,terminal-class (:background ,terminal-green
+                                    :foreground ,terminal-monokai-bg))))
 
    ;; ecb
    `(ecb-default-highlight-face
@@ -674,7 +674,7 @@ Also affects 'linum-mode' background."
    ;; faces used by isearch
    `(isearch
      ((,class (:foreground ,monokai-bg
-                           :background ,magenta
+                           :background ,violet
                            :weight normal))
       (,terminal-class (:foreground ,terminal-monokai-bg
                                     :background ,terminal-magenta
@@ -769,16 +769,14 @@ Also affects 'linum-mode' background."
                                                          :style unspecified)))))
 
    `(region
-     ((,class (:background ,monokai-hl
-                           :inherit t))
-      (,terminal-class (:background ,terminal-monokai-hl
-                                    :inherit t))))
+     ((,class (:foreground ,monokai-bg
+                           :background ,blue))
+      (,terminal-class (:foreground ,terminal-monokai-bg
+                                    :background ,terminal-blue))))
 
    `(secondary-selection
-     ((,class (:background ,monokai-hl
-                           :inherit t))
-      (,terminal-class (:background ,terminal-monokai-hl
-                                    :inherit t))))
+     ((,class (:background ,monokai-hl))
+      (,terminal-class (:background ,terminal-monokai-hl))))
 
 
    `(trailing-whitespace
@@ -1002,21 +1000,21 @@ Also affects 'linum-mode' background."
    ;; auto-complete
    `(ac-candidate-face
      ((,class (:background ,monokai-hl
-                           :foreground ,cyan))
+                           :foreground ,blue))
       (,terminal-class (:background ,terminal-monokai-hl
-                                    :foreground ,terminal-cyan))))
+                                    :foreground ,terminal-blue))))
 
    `(ac-selection-face
-     ((,class (:background ,cyan-lc
-                           :foreground ,cyan-hc))
-      (,terminal-class (:background ,terminal-cyan-lc
-                                    :foreground ,terminal-cyan-hc))))
+     ((,class (:background ,blue
+                           :foreground ,monokai-bg))
+      (,terminal-class (:background ,terminal-blue
+                                    :foreground ,terminal-monokai-bg))))
 
    `(ac-candidate-mouse-face
-     ((,class (:background ,cyan-hc
-                           :foreground ,cyan-lc))
-      (,terminal-class (:background ,terminal-cyan-hc
-                                    :foreground ,terminal-cyan-lc))))
+     ((,class (:background ,blue
+                           :foreground ,monokai-bg))
+      (,terminal-class (:background ,terminal-blue
+                                    :foreground ,terminal-monokai-bg))))
 
    `(ac-completion-face
      ((,class (:foreground ,monokai-emph
@@ -1031,10 +1029,10 @@ Also affects 'linum-mode' background."
                                     :foreground ,terminal-blue))))
 
    `(ac-gtags-selection-face
-     ((,class (:background ,blue-lc
-                           :foreground ,blue-hc))
-      (,terminal-class (:background ,terminal-blue-lc
-                                    :foreground ,terminal-blue-hc))))
+     ((,class (:background ,blue
+                           :foreground ,monokai-bg))
+      (,terminal-class (:background ,terminal-blue
+                                    :foreground ,terminal-monokai-bg))))
 
    `(ac-yasnippet-candidate-face
      ((,class (:background ,monokai-hl
@@ -1043,10 +1041,10 @@ Also affects 'linum-mode' background."
                                     :foreground ,terminal-yellow))))
 
    `(ac-yasnippet-selection-face
-     ((,class (:background ,yellow-lc
-                           :foreground ,yellow-hc))
-      (,terminal-class (:background ,terminal-yellow-lc
-                                    :foreground ,terminal-yellow-hc))))
+     ((,class (:background ,yellow
+                           :foreground ,monokai-bg))
+      (,terminal-class (:background ,terminal-yellow
+                                    :foreground ,terminal-monokai-bg))))
 
    ;; auto highlight symbol
    `(ahs-definition-face
@@ -1075,7 +1073,7 @@ Also affects 'linum-mode' background."
       (,terminal-class (:foreground ,terminal-magenta
                                     :background unspecified ))))
 
-   `(ahs-plugin-defalt-face
+   `(ahs-plugin-default-face
      ((,class (:foreground ,magenta
                            :background unspecified))
       (,terminal-class (:foreground ,terminal-magenta
@@ -1296,55 +1294,70 @@ Also affects 'linum-mode' background."
    ;; company-mode
    `(company-tooltip
      ((,class (:background ,monokai-hl
-                           :foreground ,cyan))
+                           :foreground ,monokai-emph))
       (,terminal-class (:background ,terminal-monokai-hl
-                                    :foreground ,terminal-cyan))))
+                                    :foreground ,terminal-monokai-emph))))
 
    `(company-tooltip-selection
-     ((,class (:background ,cyan-lc
-                           :foreground ,cyan-hc))
-      (,terminal-class (:background ,terminal-cyan-lc
-                                    :foreground ,terminal-cyan-hc))))
+     ((,class (:background ,blue
+                           :foreground ,monokai-bg))
+      (,terminal-class (:background ,terminal-blue
+                                    :foreground ,terminal-monokai-bg))))
 
    `(company-tooltip-mouse
-     ((,class (:background ,cyan-hc
-                           :foreground ,cyan-lc))
-      (,terminal-class (:background ,terminal-cyan-hc
-                                    :foreground ,terminal-cyan-lc))))
+     ((,class (:background ,blue
+                           :foreground ,monokai-bg))
+      (,terminal-class (:background ,terminal-blue
+                                    :foreground ,terminal-monokai-bg))))
 
    `(company-tooltip-common
-     ((,class (:foreground ,monokai-emph
+     ((,class (:foreground ,blue
                            :underline t))
-      (,terminal-class (:foreground ,terminal-monokai-emph
+      (,terminal-class (:foreground ,terminal-blue
                                     :underline t))))
 
    `(company-tooltip-common-selection
-     ((,class (:foreground ,monokai-emph
+     ((,class (:foreground ,monokai-bg
+			   :background ,blue
                            :underline t))
-      (,terminal-class (:foreground ,terminal-monokai-emph
+      (,terminal-class (:foreground ,terminal-monokai-bg
                                     :underline t))))
 
    `(company-preview
      ((,class (:background ,monokai-hl
-                           :foreground ,cyan))
+                           :foreground ,monokai-emph))
       (,terminal-class (:background ,terminal-monokai-hl
-                                    :foreground ,terminal-cyan))))
+                                    :foreground ,terminal-monokai-emph))))
 
    `(company-preview-common
-     ((,class (:foreground ,monokai-emph
+     ((,class (:foreground ,blue
                            :underline t))
-      (,terminal-class (:foreground ,terminal-monokai-emph
+      (,terminal-class (:foreground ,terminal-blue
                                     :underline t))))
 
    `(company-scrollbar-bg
-     ((,class (:background ,gray-l))
-      (,terminal-class (:background ,terminal-gray-l))))
+     ((,class (:background ,monokai-hl))
+      (,terminal-class (:background ,terminal-monokai-hl))))
 
    `(company-scrollbar-fg
-     ((,class (:background ,yellow-d))
-      (,terminal-class (:background ,terminal-yellow-d))))
+     ((,class (:background ,monokai-comments))
+      (,terminal-class (:background ,terminal-monokai-comments))))
 
-   ;; cscope
+   ;; company-mode tooltip annnotations
+   `(company-tooltip-annotation
+     ((,class (:background ,monokai-hl
+                           :foreground ,green))
+      (,terminal-class (:background ,terminal-monokai-hl
+                                    :foreground ,terminal-green))))
+
+   ;; company-mode templates
+   `(company-template-field
+     ((,class (:background ,monokai-hl
+                           :foreground ,blue))
+      (,terminal-class (:background ,terminal-monokai-hl
+                                    :foreground ,terminal-blue))))
+
+   ;; CSCOPE
    `(cscope-file-face
      ((,class (:foreground ,green
                            :weight bold))
@@ -2751,16 +2764,12 @@ Also affects 'linum-mode' background."
 
    ;; hl-line-mode
    `(hl-line
-     ((,class (:background ,monokai-hl-line
-                           :inherit t))
-      (,terminal-class (:background ,terminal-monokai-hl-line
-                                    :inherit t))))
+     ((,class (:background ,monokai-hl-line))
+      (,terminal-class (:background ,terminal-monokai-hl-line))))
 
    `(hl-line-face
-     ((,class (:background ,monokai-hl-line
-                           :inherit t))
-      (,terminal-class (:background ,terminal-monokai-hl-line
-                                    :inherit t))))
+     ((,class (:background ,monokai-hl-line))
+      (,terminal-class (:background ,terminal-monokai-hl-line))))
 
    ;; ido-mode
    `(ido-first-match
@@ -3591,6 +3600,98 @@ Also affects 'linum-mode' background."
      ((,class (:background ,monokai-hl))
       (,terminal-class (:background ,terminal-monokai-hl))))
 
+   ;; neo-tree
+   `(neo-banner-face
+     ((,class (:foreground ,blue
+                           :background ,monokai-bg
+                           :weight bold))
+      (,terminal-class (:foreground ,terminal-blue
+                                    :background ,terminal-monokai-bg
+                                    :weight bold))))
+
+
+   `(neo-header-face
+     ((,class (:foreground ,monokai-emph
+                           :background ,monokai-bg))
+      (,terminal-class (:foreground ,terminal-monokai-emph
+                                    :background ,terminal-monokai-bg))))
+
+   `(neo-root-dir-face
+     ((,class (:foreground ,green
+                           :background ,monokai-bg))
+      (,terminal-class (:foreground ,terminal-green
+                                    :background ,terminal-monokai-bg))))
+
+   `(neo-dir-link-face
+     ((,class (:foreground ,blue))
+      (,terminal-class (:foreground ,terminal-blue
+                                    :background ,terminal-monokai-bg))))
+
+   `(neo-file-link-face
+     ((,class (:foreground ,monokai-fg))
+      (,terminal-class (:foreground ,terminal-monokai-fg))))
+
+   `(neo-button-face
+     ((,class (:underline nil))
+      (,terminal-class (:underline nil))))
+
+   `(neo-expand-btn-face
+     ((,class (:foreground ,monokai-comments))
+      (,terminal-class (:foreground ,terminal-monokai-comments))))
+
+   `(neo-vc-default-face
+     ((,class (:foreground ,monokai-fg))
+      (,terminal-class (:foreground ,terminal-monokai-fg))))
+
+   `(neo-vc-user-face
+     ((,class (:foreground ,red
+                           :slant italic))
+      (,terminal-class (:foreground ,terminal-red
+                                    :slant italic))))
+
+   `(neo-vc-up-to-date-face
+     ((,class (:foreground ,monokai-comments))
+      (,terminal-class (:foreground ,terminal-monokai-comments))))
+
+   `(neo-vc-edited-face
+     ((,class (:foreground ,orange))
+      (,terminal-class (:foreground ,terminal-orange))))
+
+   `(neo-vc-needs-update-face
+     ((,class (:underline t))
+      (,terminal-class (:underline t))))
+
+   `(neo-vc-needs-merge-face
+     ((,class (:foreground ,red))
+      (,terminal-class (:foreground ,terminal-red))))
+
+   `(neo-vc-unlocked-changes-face
+     ((,class (:foreground ,red
+                           :background ,monokai-comments))
+      (,terminal-class (:foreground ,terminal-red
+                                    :background ,terminal-monokai-comments))))
+
+   `(neo-vc-added-face
+     ((,class (:foreground ,green))
+      (,terminal-class (:foreground ,terminal-green))))
+
+   `(neo-vc-removed-face
+     ((,class (:strike-through t))
+      (,terminal-class (:strike-through t))))
+
+   `(neo-vc-conflict-face
+     ((,class (:foreground ,red))
+      (,terminal-class (:foreground ,terminal-red))))
+
+   `(neo-vc-missing-face
+     ((,class (:foreground ,red))
+      (,terminal-class (:foreground ,terminal-red))))
+
+   `(neo-vc-ignored-face
+     ((,class (:foreground ,monokai-comments))
+      (,terminal-class (:foreground ,terminal-monokai-comments))))
+
+
    ;; org-mode
    `(org-agenda-structure
      ((,class (:foreground ,monokai-emph
@@ -3965,10 +4066,8 @@ Also affects 'linum-mode' background."
       (,terminal-class (:foreground ,terminal-orange))))
 
    `(org-mode-line-clock-overrun
-     ((,class (:inherit mode-line
-                        :background ,red))
-      (,terminal-class (:inherit mode-line
-                                 :background ,terminal-red))))
+     ((,class (:inherit mode-line))
+      (,terminal-class (:inherit mode-line))))
 
    ;; outline
    `(outline-1
@@ -4083,36 +4182,36 @@ Also affects 'linum-mode' background."
 
    ;; rainbow-delimiters
    `(rainbow-delimiters-depth-1-face
-     ((,class (:foreground ,cyan))
-      (,terminal-class (:foreground ,terminal-cyan))))
+     ((,class (:foreground ,violet))
+      (,terminal-class (:foreground ,terminal-violet))))
 
    `(rainbow-delimiters-depth-2-face
-     ((,class (:foreground ,yellow))
-      (,terminal-class (:foreground ,terminal-yellow))))
-
-   `(rainbow-delimiters-depth-3-face
      ((,class (:foreground ,blue))
       (,terminal-class (:foreground ,terminal-blue))))
 
-   `(rainbow-delimiters-depth-4-face
-     ((,class (:foreground ,orange))
-      (,terminal-class (:foreground ,terminal-orange))))
-
-   `(rainbow-delimiters-depth-5-face
+   `(rainbow-delimiters-depth-3-face
      ((,class (:foreground ,green))
       (,terminal-class (:foreground ,terminal-green))))
 
-   `(rainbow-delimiters-depth-6-face
+   `(rainbow-delimiters-depth-4-face
      ((,class (:foreground ,yellow))
       (,terminal-class (:foreground ,terminal-yellow))))
 
-   `(rainbow-delimiters-depth-7-face
-     ((,class (:foreground ,blue))
-      (,terminal-class (:foreground ,terminal-blue))))
-
-   `(rainbow-delimiters-depth-8-face
+   `(rainbow-delimiters-depth-5-face
      ((,class (:foreground ,orange))
       (,terminal-class (:foreground ,terminal-orange))))
+
+   `(rainbow-delimiters-depth-6-face
+     ((,class (:foreground ,red))
+      (,terminal-class (:foreground ,terminal-red))))
+
+   `(rainbow-delimiters-depth-7-face
+     ((,class (:foreground ,violet))
+      (,terminal-class (:foreground ,terminal-violet))))
+
+   `(rainbow-delimiters-depth-8-face
+     ((,class (:foreground ,blue))
+      (,terminal-class (:foreground ,terminal-blue))))
 
    `(rainbow-delimiters-depth-9-face
      ((,class (:foreground ,green))
@@ -4123,12 +4222,12 @@ Also affects 'linum-mode' background."
       (,terminal-class (:foreground ,terminal-yellow))))
 
    `(rainbow-delimiters-depth-11-face
-     ((,class (:foreground ,blue))
-      (,terminal-class (:foreground ,terminal-blue))))
-
-   `(rainbow-delimiters-depth-12-face
      ((,class (:foreground ,orange))
       (,terminal-class (:foreground ,terminal-orange))))
+
+   `(rainbow-delimiters-depth-12-face
+     ((,class (:foreground ,red))
+      (,terminal-class (:foreground ,terminal-red))))
 
    `(rainbow-delimiters-unmatched-face
      ((,class (:foreground ,monokai-fg
@@ -4298,11 +4397,11 @@ Also affects 'linum-mode' background."
       (,terminal-class (:inherit highlight))))
 
    `(sp-show-pair-match-face
-     ((,class (:foreground ,cyan
+     ((,class (:foreground ,orange
                            :background ,monokai-bg
                            :weight normal
                            :inverse-video t))
-      (,terminal-class (:foreground ,terminal-cyan
+      (,terminal-class (:foreground ,terminal-orange
                                     :background ,terminal-monokai-bg
                                     :weight normal
                                     :inverse-video t))))
@@ -4319,11 +4418,11 @@ Also affects 'linum-mode' background."
 
    ;; show-paren
    `(show-paren-match
-     ((,class (:foreground ,cyan
+     ((,class (:foreground ,orange
                            :background ,monokai-bg
                            :weight normal
                            :inverse-video t))
-      (,terminal-class (:foreground ,terminal-cyan
+      (,terminal-class (:foreground ,terminal-orange
                                     :background ,terminal-monokai-bg
                                     :weight normal
                                     :inverse-video t))))
@@ -4340,11 +4439,11 @@ Also affects 'linum-mode' background."
 
    ;; mic-paren
    `(paren-face-match
-     ((,class (:foreground ,cyan
+     ((,class (:foreground ,orange
                            :background ,monokai-bg
                            :weight normal
                            :inverse-video t))
-      (,terminal-class (:foreground ,terminal-cyan
+      (,terminal-class (:foreground ,terminal-orange
                                     :background ,terminal-monokai-bg
                                     :weight normal
                                     :inverse-video t))))
@@ -5334,7 +5433,7 @@ Also affects 'linum-mode' background."
    `(magit-diff-use-overlays nil)
 
    ;; highlight-changes
-   `(highlight-changes-colors (,magenta ,violet))
+   `(highlight-changes-colors '(,magenta ,violet))
 
    ;; highlight-tail
    `(highlight-tail-colors
