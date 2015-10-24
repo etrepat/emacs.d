@@ -14,6 +14,7 @@
 
 (defun my-elixir-mode-defaults ()
   "My elixir mode default settings."
+  (load-theme 'ujelly t)
   (subword-mode +1)
   (rainbow-delimiters-mode +1)
   (company-mode +1)
