@@ -72,7 +72,7 @@
 (powerline-center-theme)
 
 ;; theme
-(load-theme 'zenburn t)
+(load-theme 'monokai t)
 
 (provide 'core-ui)
 ;;; core-ui.el ends here
