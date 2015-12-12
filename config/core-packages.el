@@ -43,6 +43,7 @@
     popup
     powerline
     projectile
+    racer
     rainbow-mode
     rainbow-delimiters
     ruby-tools
