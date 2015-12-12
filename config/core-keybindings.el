@@ -71,5 +71,8 @@
 (global-set-key (kbd "C-c C-S-p") 'mc/mark-previous-line-like-this)
 (global-set-key (kbd "C-c C-S-n") 'mc/mark-all-like-this)
 
+;; company
+(global-set-key (kbd "C-c SPC") 'company-indent-or-complete-common)
+
 (provide 'core-keybindings)
 ;;; core-keybindings.el ends here
