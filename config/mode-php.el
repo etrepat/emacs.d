@@ -27,7 +27,6 @@
                               ))
   (c-set-style "laravel")
   (subword-mode +1)
-  ;; (add-to-list 'ac-sources 'ac-php-func-source)
   (rainbow-delimiters-mode +1)
   (local-set-key (kbd "M-P") 'php-insert-doc-block))
 

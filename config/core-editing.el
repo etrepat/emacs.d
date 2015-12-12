@@ -146,13 +146,13 @@
 ;; expand-region
 (require 'expand-region)
 
-;; auto-complete
-(require 'auto-complete-config)
-(setq ac-comphist-file (expand-file-name "ac-comphist.dat" etrepat/save-dir))
-(ac-config-default)
-(add-to-list 'completion-styles 'initials t)
-(setq completion-cycle-threshold 5
-      ac-auto-start 3)
+;; company-mode
+(setq company-idle-delay 0.25
+      company-tooltip-limit 15
+      company-minimum-prefix-length 2
+      company-tooltip-align-annotations t
+      company-tooltip-flip-when-above t)
+(add-hook 'after-init-hook 'global-company-mode)
 
 ;; multiple cursors
 (require 'multiple-cursors)
