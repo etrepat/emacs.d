@@ -74,5 +74,10 @@
 ;; company
 (global-set-key (kbd "C-c SPC") 'company-indent-or-complete-common)
 
+;; disable right meta on OSX so we cant type ~}]
+(cond
+ ((string-equal system-type "darwin")
+  (setq ns-right-alternate-modifier nil)))
+
 (provide 'core-keybindings)
 ;;; core-keybindings.el ends here
