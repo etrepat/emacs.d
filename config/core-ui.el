@@ -55,7 +55,10 @@
 (setq uniquify-ignore-buffers-re "^\\*") ; don't muck with special buffers
 
 ;; visible bell
-(setq visible-bell t)
+(setq visible-bell nil
+      ring-bell-function (lambda ()
+                           (invert-face 'mode-line)
+                           (run-with-timer 0.1 nil 'invert-face 'mode-line)))
 
 ;; font face
 (set-face-attribute 'default nil
