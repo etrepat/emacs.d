@@ -27,6 +27,7 @@
     flx-ido
     flycheck
     flycheck-rust
+    fsharp-mode
     gitattributes-mode
     gitconfig-mode
     gitignore-mode
